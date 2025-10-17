@@ -1,0 +1,15 @@
+<svg viewBox="0 0 144 144" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="144.000000" height="144.000000" fill="none" clip-path="url(#clipPath_17)" customFrame="url(#clipPath_17)">
+	<defs>
+		<clipPath id="clipPath_17">
+			<rect width="144.000000" height="144.000000" x="0.000000" y="0.000000" rx="72.000000" fill="rgb(255,255,255)" />
+		</clipPath>
+		<clipPath id="clipPath_18">
+			<rect width="64.000000" height="64.000000" x="40.000000" y="40.000000" fill="rgb(255,255,255)" />
+		</clipPath>
+	</defs>
+	<rect id="Icon" width="144.000000" height="144.000000" x="0.000000" y="0.000000" rx="72.000000" fill="rgb(49,120,198)" />
+	<g id="css3-alt" clip-path="url(#clipPath_18)" customFrame="url(#clipPath_18)">
+		<rect id="css3-alt" width="64.000000" height="64.000000" x="40.000000" y="40.000000" fill="rgb(255,255,255)" fill-opacity="0" />
+		<path id="Vector" d="M52 48L56 90L72 96L88 90L92 48L52 48ZM58.6641 54L85.3047 54L84.7812 60L73.3906 66L78.2422 66L84 66L84.2461 66L83.2227 78.0156L83.2617 78L82.7109 84L72 88L61.2695 84L60.6094 76L66.6523 76L66.9648 80.0664L72 81.8086L77.043 80.1016L77.7344 72L60.2617 72L59.7461 66L71.5664 60L59.2188 60L58.6641 54Z" fill="rgb(255,255,255)" fill-rule="nonzero" />
+	</g>
+</svg>
