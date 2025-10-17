@@ -14,3 +14,16 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+@keyframes moveUpDown {
+  0%,
+  100% {
+    transform: translateY(30px);
+  }
+  50% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(30px); /* вверх быстрее */
+  }
+}
