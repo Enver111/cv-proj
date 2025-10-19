@@ -1,4 +1,5 @@
 import About from "./About";
+import Blogs from "./Blogs";
 import Header from "./Header";
 import Main from "./Main";
 import Skills from "./Skills";
@@ -12,6 +13,7 @@ function App() {
       <About />
       <Skills />
       <Works />
+      <Blogs />
     </>
   );
 }
