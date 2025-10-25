@@ -26,7 +26,6 @@ export default function BlogsCard({
   const src = imgError ? DefaultBlogsImg : image;
 
   function cleanDescription(html: string) {
-    // убираем все <img ...>
     return html.replace(/<img[^>]*>/g, "").trim();
   }
 
@@ -34,12 +33,11 @@ export default function BlogsCard({
     <div className="flex justify-center gap-[50px] border-t border-b py-[65px] my-[64px]">
       <div className="w-[300px]">
         <div className="relative w-full h-[200px] rounded-xl overflow-hidden bg-[#2b2d33]">
-          {/* Скелетон shimmer */}
+          {/* Скелетон для картинки */}
           {!imgLoaded && (
-            <div className="absolute inset-0 animate-pulse bg-gradient-to-r from-[#2b2d33] via-[#3a3c44] to-[#2b2d33] bg-[length:200%_100%]" />
+            <div className="absolute inset-0 animate-pulse bg-gray-700" />
           )}
 
-          {/* Картинка */}
           <img
             src={src}
             alt="Blog preview"
@@ -51,7 +49,6 @@ export default function BlogsCard({
               setImgError(true);
               setImgLoaded(true);
             }}
-            loading="lazy"
           />
         </div>
       </div>

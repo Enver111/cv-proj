@@ -22,7 +22,7 @@ export default function Skills() {
     { id: 8, img: NextIcon, name: "NEXT", color: "white" },
   ];
   return (
-    <div className="bg-[#292F36]">
+    <section id="skills" className="bg-[#292F36]">
       <div className="bg-[url(./assets/bg/skills.png)]">
         <Container className="relative py-[128px] flex flex-col">
           <Scroll />
@@ -59,6 +59,6 @@ export default function Skills() {
           </div>
         </Container>
       </div>
-    </div>
+    </section>
   );
 }

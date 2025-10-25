@@ -4,7 +4,7 @@ import WorksPrew from "./WorksPrew";
 
 export default function Works() {
   return (
-    <div className="bg-[#1A1E23]  ">
+    <section id="works" className="bg-[#1A1E23]  ">
       <div className="bg-[url(./assets/works.png)] ">
         <Container>
           <Scroll />
@@ -20,6 +20,6 @@ export default function Works() {
           </div>
         </Container>
       </div>
-    </div>
+    </section>
   );
 }

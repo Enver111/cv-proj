@@ -5,7 +5,7 @@ import IconSend from "../assets/icons/icon-send.svg";
 
 export default function Contact() {
   return (
-    <div className="bg-[#1A1E23] py-[64px]">
+    <section id="contact" className="bg-[#1A1E23] py-[64px]">
       <Container>
         <Scroll />
         <h1 className="mt-[64px] text-[64px] text-center text-[#12F7D6]">
@@ -44,6 +44,6 @@ export default function Contact() {
           <img src={IconSend} alt="IconSend" />
         </button>
       </Container>
-    </div>
+    </section>
   );
 }
