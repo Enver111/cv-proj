@@ -1,29 +1,58 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { useNews } from "./Hooks/useNews";
 import { motion, AnimatePresence } from "framer-motion";
 import BlogsCard from "./BlogsCard";
 import Container from "./Conteiner";
 import Scroll from "./UI/Scroll";
-
-type NewsItem = {
-  title: string;
-  link: string;
-  pubDate: string;
-  description: string;
-  enclosure?: { link: string };
-};
+import SkeletonBlogCard from "./UI/SkeletonBlogCard";
+import ErrorMessage from "./UI/Error";
 
 export default function Blogs() {
-  const [news, setNews] = useState<NewsItem[]>([]);
+  const { news, loading, error } = useNews("https://3dnews.ru/news/rss");
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState<1 | -1>(1);
 
-  useEffect(() => {
-    fetch(
-      "https://api.rss2json.com/v1/api.json?rss_url=https://3dnews.ru/news/rss"
-    )
-      .then((res) => res.json())
-      .then((data) => setNews(data.items || []));
-  }, []);
+  if (loading) {
+    return (
+      <section id="blogs">
+        <Container className="py-[64px]">
+          <Scroll />
+          <h1 className="mt-[64px] text-[64px] text-center text-[#12F7D6]">
+            Blogs
+          </h1>
+          <div className="border-b-[2px] w-[148px] mx-auto border-[#12F7D6]"></div>
+          <p className="text-center mt-[16px]">
+            My thoughts on technology and business, welcome to subscribe
+          </p>
+
+          <div className="mt-12">
+            <SkeletonBlogCard />
+          </div>
+        </Container>
+      </section>
+    );
+  }
+
+  if (error) {
+    return (
+      <section id="blogs">
+        <Container className="py-[64px]">
+          <Scroll />
+          <h1 className="mt-[64px] text-[64px] text-center text-[#12F7D6]">
+            Blogs
+          </h1>
+          <div className="border-b-[2px] w-[148px] mx-auto border-[#12F7D6]"></div>
+          <p className="text-center mt-[16px]">
+            My thoughts on technology and business, welcome to subscribe
+          </p>
+
+          <div className="mt-12">
+            <ErrorMessage message={error} />
+          </div>
+        </Container>
+      </section>
+    );
+  }
 
   const nextNews = () => {
     setDirection(1);
@@ -49,7 +78,7 @@ export default function Blogs() {
           My thoughts on technology and business, welcome to subscribe
         </p>
 
-        <div className="relative min-h-[500px] overflow-hidden">
+        <div className="relative h-[700px] overflow-hidden">
           <AnimatePresence mode="wait" custom={direction}>
             {currentNews && (
               <motion.div
