@@ -4,7 +4,7 @@ import Mac from "../assets/bg/mac.png";
 
 export default function About() {
   return (
-    <div className="bg-[#1A1E23]">
+    <section id="about" className="bg-[#1A1E23]">
       <div className="bg-[url(./assets/bg/about-me.png)]">
         <Container className="pb-[128px]">
           <Scroll />
@@ -44,6 +44,6 @@ export default function About() {
           </div>
         </Container>
       </div>
-    </div>
+    </section>
   );
 }

@@ -38,7 +38,7 @@ export default function Blogs() {
   const currentNews = news[current];
 
   return (
-    <div>
+    <section id="blogs">
       <Container className="py-[64px]">
         <Scroll />
         <h1 className="mt-[64px] text-[64px] text-center text-[#12F7D6]">
@@ -87,6 +87,6 @@ export default function Blogs() {
           </button>
         </div>
       </Container>
-    </div>
+    </section>
   );
 }

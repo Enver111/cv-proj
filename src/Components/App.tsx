@@ -9,6 +9,7 @@ import Works from "./Works";
 function App() {
   return (
     <>
+      <NavigaionBar />
       <Header />
       <Main />
       <About />
